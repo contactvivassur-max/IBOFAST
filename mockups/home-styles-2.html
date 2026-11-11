@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZisplayTV – Styles d'accueil 5 à 8</title>
+<style>
+:root{--acc:#00d4ff;--mut:#8a93b2;--txt:#e8ecf8}
+*{box-sizing:border-box;margin:0}
+body{background:#05070f;color:var(--txt);font-family:system-ui,sans-serif;padding:24px 16px;max-width:1100px;margin:auto}
+h1{font-size:1.6rem}h2{margin:32px 0 6px;font-size:1.15rem}.desc{color:var(--mut);font-size:.9rem;margin-bottom:10px}
+.tv{aspect-ratio:16/9;border-radius:14px;overflow:hidden;position:relative;border:2px solid #222a48;display:flex;flex-direction:column;font-size:clamp(9px,1.5vw,15px)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:1.2em 1.8em}
+.logo{font-weight:800;letter-spacing:.05em;font-size:1.5em}.logo b{color:var(--acc)}
+.clock{color:var(--mut);text-align:right}.clock big{display:block;color:var(--txt);font-size:1.4em;font-weight:700}
+/* 5 carrousel + dock */
+.s5{background:linear-gradient(180deg,#101a3a,#05070f)}
+.car{flex:1;display:flex;align-items:center;justify-content:center;gap:1.2em}
+.car div{width:22%;aspect-ratio:16/10;border-radius:1em;background:linear-gradient(135deg,#2b3566,#171d3d);opacity:.55;transform:scale(.88)}
+.car div.f{width:38%;opacity:1;transform:none;background:linear-gradient(135deg,#ff6a00,#ee0979);box-shadow:0 0 0 3px #fff,0 20px 50px #ee097966;display:flex;align-items:flex-end;padding:1em;font-weight:800;font-size:1.3em}
+.dock{display:flex;justify-content:center;gap:2em;padding:1em;background:#0008}
+.dock span{padding:.5em 1.2em;border-radius:2em;color:var(--mut)}.dock span.on{background:#fff;color:#000;font-weight:700}
+/* 6 bento */
+.s6{background:#0d0f14}
+.bento{flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:.9em;padding:0 1.8em 1.8em}
+.b{border-radius:1.1em;padding:1em;font-weight:700;display:flex;align-items:flex-end;background:#191d27}
+.b.live{grid-column:span 2;grid-row:span 2;background:linear-gradient(135deg,#0072ff,#00c6ff);font-size:1.6em;border:3px solid #fff}
+.b.m{background:linear-gradient(135deg,#f7971e,#ffd200);color:#111}.b.s{background:linear-gradient(135deg,#8e2de2,#4a00e0)}
+.b.f{background:linear-gradient(135deg,#ff416c,#ff4b2b)}.b.r{background:#222838}
+/* 7 neon */
+.s7{background:#07030f;background-image:linear-gradient(#ff00ff12 1px,transparent 1px),linear-gradient(90deg,#00ffff12 1px,transparent 1px);background-size:2.5em 2.5em}
+.neon{flex:1;display:flex;gap:1.4em;padding:0 2em 2em;align-items:center}
+.n{flex:1;height:70%;border-radius:.8em;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5em;font-weight:800;letter-spacing:.1em;background:#0b0618}
+.n i{font-style:normal;font-size:2.6em}
+.n1{border:2px solid #0ff;box-shadow:0 0 20px #0ff,inset 0 0 20px #0ff4;color:#0ff}
+.n2{border:2px solid #f0f;box-shadow:0 0 20px #f0f8;color:#f0f}.n3{border:2px solid #ff0;box-shadow:0 0 20px #ff08;color:#ff0}.n4{border:2px solid #0f8;box-shadow:0 0 20px #0f88;color:#0f8}
+/* 8 liste + lecteur */
+.s8{flex-direction:row;background:#10131c}
+.list{width:30%;background:#0a0c13;padding:1em;display:flex;flex-direction:column;gap:.4em}
+.list .cat{display:flex;gap:.5em;margin-bottom:.4em}.list .cat span{padding:.3em .8em;border-radius:2em;background:#1b2030;color:var(--mut);font-size:.85em}.list .cat span.on{background:var(--acc);color:#001;font-weight:700}
+.ch{display:flex;align-items:center;gap:.7em;padding:.5em .7em;border-radius:.6em;background:#151a27}.ch.on{background:#1f3a5c;outline:2px solid var(--acc)}
+.ch em{width:1.8em;height:1.8em;border-radius:.4em;background:#2c3550}
+.right{flex:1;display:flex;flex-direction:column;padding:1.2em;gap:.8em}
+.player{flex:1;border-radius:.9em;background:linear-gradient(135deg,#1c2b57,#3a1c57);display:grid;place-items:center;font-size:3em}
+.epg{background:#151a27;border-radius:.8em;padding:.8em;display:flex;gap:1em;color:var(--mut)}.epg b{color:var(--txt)}
+.menu{display:flex;gap:.6em}.menu span{flex:1;text-align:center;padding:.6em;border-radius:.7em;background:#1b2030}
+</style></head><body>
+<h1>ZisplayTV – Styles d'accueil 5 à 8</h1>
+
+<h2>Style 5 – Carrousel + dock (type Apple TV)</h2>
+<p class="desc">Cartes à la une au centre, la carte sélectionnée est agrandie, navigation en pilules en bas.</p>
+<div class="tv s5"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock"><big>20:45</big>11 nov.</div></div>
+<div class="car"><div></div><div class="f">Live TV</div><div></div></div>
+<div class="dock"><span class="on">Live TV</span><span>Films</span><span>Séries</span><span>Favoris</span><span>Réglages</span></div></div>
+
+<h2>Style 6 – Mosaïque Bento</h2>
+<p class="desc">Cartes de tailles différentes, très colorées, avec une grande case Live TV en vedette.</p>
+<div class="tv s6"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock"><big>20:45</big>11 nov.</div></div>
+<div class="bento"><div class="b live">📺 Live TV</div><div class="b m">🎬 Films</div><div class="b s">🍿 Séries</div><div class="b f">⭐ Favoris</div><div class="b r">⚙️ Réglages</div></div></div>
+
+<h2>Style 7 – Néon / Gaming</h2>
+<p class="desc">Fond sombre quadrillé, bordures lumineuses cyan, rose, jaune, vert. Look dynamique et jeune.</p>
+<div class="tv s7"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock"><big>20:45</big>11 nov.</div></div>
+<div class="neon"><div class="n n1"><i>📺</i>LIVE</div><div class="n n2"><i>🎬</i>FILMS</div><div class="n n3"><i>🍿</i>SÉRIES</div><div class="n n4"><i>⚙️</i>RÉGLAGES</div></div></div>
+
+<h2>Style 8 – Liste de chaînes + lecteur (direct dans le live)</h2>
+<p class="desc">Pas de page d'accueil séparée : on arrive directement sur la liste des chaînes avec l'aperçu et le programme en cours.</p>
+<div class="tv s8"><div class="list"><div class="logo" style="margin-bottom:.4em">ZISPLAY<b>TV</b></div><div class="cat"><span class="on">Toutes</span><span>Sport</span><span>Ciné</span></div>
+<div class="ch on"><em></em>1 · Chaîne Une</div><div class="ch"><em></em>2 · Chaîne Deux</div><div class="ch"><em></em>3 · Chaîne Trois</div><div class="ch"><em></em>4 · Chaîne Quatre</div></div>
+<div class="right"><div class="player">▶</div><div class="epg"><b>Maintenant</b> Journal 20h <span>· Ensuite : Film</span></div><div class="menu"><span>📺 Live</span><span>🎬 Films</span><span>🍿 Séries</span><span>⚙️</span></div></div></div>
+</body></html>
