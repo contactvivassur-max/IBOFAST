@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZisplayTV – Styles d'accueil</title>
+<style>
+:root{--bg:#0b1020;--card:#141b34;--acc:#00d4ff;--acc2:#7c4dff;--txt:#e8ecf8;--mut:#8a93b2}
+*{box-sizing:border-box;margin:0}
+body{background:#05070f;color:var(--txt);font-family:system-ui,sans-serif;padding:24px 16px;max-width:1100px;margin:auto}
+h1{font-size:1.6rem;margin-bottom:4px} p.sub{color:var(--mut);margin-bottom:28px}
+h2{margin:32px 0 6px;font-size:1.15rem} .desc{color:var(--mut);font-size:.9rem;margin-bottom:10px}
+.tv{aspect-ratio:16/9;border-radius:14px;overflow:hidden;position:relative;border:2px solid #222a48;display:flex;flex-direction:column;font-size:clamp(9px,1.5vw,15px)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:1.2em 1.8em}
+.logo{font-weight:800;letter-spacing:.05em;font-size:1.5em}.logo b{color:var(--acc)}
+.clock{color:var(--mut);text-align:right}.clock big{display:block;color:var(--txt);font-size:1.4em;font-weight:700}
+.foot{margin-top:auto;display:flex;justify-content:space-between;padding:.9em 1.8em;color:var(--mut);font-size:.85em;background:#0006}
+/* 1 tuiles */
+.s1{background:radial-gradient(circle at 20% 0,#1b2a5c,var(--bg) 60%)}
+.s1 .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:1em;padding:0 1.8em;flex:1}
+.t{border-radius:1em;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4em;font-weight:700;border:2px solid transparent}
+.t i{font-style:normal;font-size:2.6em}
+.s1 .t:nth-child(1){grid-row:span 2;background:linear-gradient(135deg,#0a84ff,#6a3df0);border-color:#fff8;font-size:1.4em}
+.s1 .t:nth-child(2){background:linear-gradient(135deg,#ff416c,#ff4b2b)}.s1 .t:nth-child(3){background:linear-gradient(135deg,#11998e,#38ef7d)}
+/* 2 hero */
+.s2{background:#0a0a0f}
+.hero{flex:1.3;margin:0 1.8em;border-radius:1em;background:linear-gradient(90deg,#000d,#0000),linear-gradient(135deg,#7c4dff,#00d4ff);padding:2em;display:flex;flex-direction:column;justify-content:flex-end}
+.hero h3{font-size:2em}.btn{display:inline-block;margin-top:.7em;background:#fff;color:#000;padding:.4em 1.2em;border-radius:2em;font-weight:700;width:max-content}
+.rail{padding:.8em 1.8em;flex:.9}.rail span{font-weight:700}.row{display:flex;gap:.8em;margin-top:.5em}
+.row div{flex:1;aspect-ratio:2/3;max-height:6.5em;border-radius:.6em;background:linear-gradient(160deg,#2a2f55,#151833)}
+.row div:first-child{outline:3px solid var(--acc)}
+/* 3 sidebar */
+.s3{flex-direction:row;background:linear-gradient(120deg,#0f1226,#1a1040)}
+.side{width:22%;background:#0007;padding:1.4em 1em;display:flex;flex-direction:column;gap:.5em}
+.side .it{padding:.7em 1em;border-radius:.7em;color:var(--mut)}.side .it.on{background:var(--acc);color:#001;font-weight:700}
+.main3{flex:1;padding:1.4em;display:flex;flex-direction:column;gap:1em}
+.panel{background:var(--card);border-radius:1em;padding:1em;flex:1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1em;flex:1}
+/* 4 circles */
+.s4{background:linear-gradient(160deg,#1d0b3a,#0b3a4a)}
+.circ{flex:1;display:flex;justify-content:center;align-items:center;gap:2.4em}
+.c{text-align:center}.c div{width:7em;height:7em;border-radius:50%;background:#ffffff14;border:2px solid #fff3;backdrop-filter:blur(8px);display:grid;place-items:center;font-size:2.4em;margin-bottom:.4em}
+.c.on div{border-color:var(--acc);box-shadow:0 0 30px var(--acc);background:#00d4ff22}
+</style></head><body>
+<h1>ZisplayTV – Propositions d'écran d'accueil</h1>
+<p class="sub">4 styles inspirés d'IBO Pro. Dis-moi lequel te plaît et je l'implémente.</p>
+
+<h2>Style 1 – Tuiles colorées (le plus proche d'IBO Pro)</h2>
+<p class="desc">Grande tuile Live TV + Films + Séries, barre du haut avec horloge, infos abonnement en bas. Très lisible à la télécommande.</p>
+<div class="tv s1"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock"><big>20:45</big>mer. 11 nov.</div></div>
+<div class="grid"><div class="t"><i>📺</i>LIVE TV</div><div class="t"><i>🎬</i>FILMS</div><div class="t"><i>🍿</i>SÉRIES</div><div class="t" style="grid-column:2/4;flex-direction:row;background:#1c2447">⚙️ Paramètres &nbsp; 🔄 Playlist &nbsp; ⭐ Favoris</div></div>
+<div class="foot"><span>Playlist : MaListe</span><span>Expire : 12/2027</span><span>ID appareil : AB:12:CD</span></div></div>
+
+<h2>Style 2 – Hero + rails (type Netflix)</h2>
+<p class="desc">Bannière du contenu à la une, puis rangées « Continuer à regarder », « Chaînes récentes », etc.</p>
+<div class="tv s2"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock">Live · Films · Séries · Favoris</div></div>
+<div class="hero"><h3>À la une</h3><span class="btn">▶ Regarder</span></div>
+<div class="rail"><span>Continuer à regarder</span><div class="row"><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
+
+<h2>Style 3 – Menu latéral + panneaux</h2>
+<p class="desc">Menu à gauche, aperçu live dans un panneau, accès rapide aux dernières chaînes. Idéal pour beaucoup de sections.</p>
+<div class="tv s3"><div class="side"><div class="logo" style="margin-bottom:.6em">ZISPLAY<b>TV</b></div><div class="it on">📺 Live TV</div><div class="it">🎬 Films</div><div class="it">🍿 Séries</div><div class="it">⭐ Favoris</div><div class="it">⚙️ Réglages</div></div>
+<div class="main3"><div class="panel">Aperçu en direct ▶</div><div class="two"><div class="panel">Dernières chaînes</div><div class="panel">Reprendre la lecture</div></div></div></div>
+
+<h2>Style 4 – Minimal / glassmorphism</h2>
+<p class="desc">Fond dégradé, grandes icônes rondes translucides avec halo lumineux sur la sélection. Épuré et moderne.</p>
+<div class="tv s4"><div class="top"><div class="logo">ZISPLAY<b>TV</b></div><div class="clock"><big>20:45</big>11 nov.</div></div>
+<div class="circ"><div class="c on"><div>📺</div>Live</div><div class="c"><div>🎬</div>Films</div><div class="c"><div>🍿</div>Séries</div><div class="c"><div>⚙️</div>Réglages</div></div>
+<div class="foot"><span>Playlist : MaListe</span><span>Expire : 12/2027</span></div></div>
+</body></html>
